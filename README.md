@@ -39,7 +39,7 @@
 
 ```plaintext
 +----------------+      +----------------+      +----------------+
-|     User       | 1:n  |      Gear      | 1:n  |   SensorData   |
+|     User       | 1:n  |      Gear      | n:n  |   SensorData   |
 |----------------| <----|----------------| <----|----------------|
 | id (PK)        |      | id (PK)        |      | id (PK)        |
 | username       |      | userId (FK)    |      | gearId (FK)    |
