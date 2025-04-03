@@ -1,0 +1,57 @@
+# General
+*.log
+*.tmp
+*.bak
+*.swp
+.DS_Store
+
+# Java / Spring Boot (Backend)
+# Maven build outputs
+target/
+*.jar
+*.war
+*.ear
+dependency-reduced-pom.xml
+.mvn/
+mvnw
+mvnw.cmd
+!/.mvn/wrapper/maven-wrapper.jar
+
+# Spring Boot specific
+application.properties  # Nur falls sensible Daten enthalten sind, sonst optional
+*.springBeans
+
+# React (Frontend)
+node_modules/
+dist/
+build/
+*.tgz
+.env
+.parcel-cache/
+.cache/
+
+# Docker
+*.dockerignore
+Dockerfile  # Optional, falls du es nicht versionieren willst
+
+# Database
+*.mv.db  # Für lokale H2-Datenbanktests, falls verwendet
+*.sql    # Falls du generierte SQL-Dateien hast
+
+# IDEs and Editors
+.idea/          # IntelliJ IDEA
+*.iml
+*.iws
+.vscode/        # Visual Studio Code
+*.code-workspace
+.classpath      # Eclipse
+.project
+.settings/
+.factorypath
+.springBeans
+.sts4-cache     # Spring Tool Suite
+
+# OS-specific
+Thumbs.db       # Windows
+ehthumbs.db
+Desktop.ini
