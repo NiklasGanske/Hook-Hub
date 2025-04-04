@@ -1,9 +1,7 @@
 package com.hookhub.hookhub_backend.entity;
 
 import java.util.concurrent.locks.Condition;
-
 import com.hookhub.hookhub_backend.enums.SaleStatus;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

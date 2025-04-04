@@ -18,10 +18,12 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @ManyToOne
+    @JoinColumn(name = "user_ID")
     private Long userId;
     private String content;
     @ManyToOne
-    @JoinColumn(name = "user_ID")
-    private Long catchId;
+    @JoinColumn(name = "catch_ID")
+    private Catch catchEntity;
     private String createdAt;
 }
