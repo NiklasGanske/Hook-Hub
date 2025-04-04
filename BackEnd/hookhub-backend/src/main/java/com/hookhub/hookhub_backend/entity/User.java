@@ -1,11 +1,16 @@
 package com.hookhub.hookhub_backend.entity;
 
+import java.util.List;
+
 import com.hookhub.hookhub_backend.enums.SkillLevel;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,6 +27,15 @@ public class User {
     private String username;
     private String email;
     private String password;
-    private String location;
+    private int points;
+    @OneToMany(mappedBy = "user")
+    private List<Gear> gears;
+    @OneToMany(mappedBy = "user")
+    private List<Catch> catches;
+    @OneToMany(mappedBy = "user")
+    private List<Post> posts;
+    @OneToMany(mappedBy = "user")
+    private List<MarketplaceItem> marketplaceItem;
+    @Enumerated(EnumType.STRING)
     private SkillLevel skillLevel;
 }
