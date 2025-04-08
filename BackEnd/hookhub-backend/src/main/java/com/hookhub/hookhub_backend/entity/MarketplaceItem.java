@@ -1,9 +1,10 @@
 package com.hookhub.hookhub_backend.entity;
 
-import java.util.concurrent.locks.Condition;
+import com.hookhub.hookhub_backend.enums.Condition;
 import com.hookhub.hookhub_backend.enums.SaleStatus;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Table;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -16,6 +17,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "marketplaceItems")
 public class MarketplaceItem {
 
     @Id
@@ -23,10 +25,10 @@ public class MarketplaceItem {
     private Long Id;
     @ManyToOne
     @JoinColumn(name = "user_ID")
-    private Long userId;
+    private User users;
     @ManyToOne
     @JoinColumn(name = "gear_ID")
-    private Long gearId;
+    private Gear gear;
     private double price;
     private Condition condition;
     private SaleStatus status;
