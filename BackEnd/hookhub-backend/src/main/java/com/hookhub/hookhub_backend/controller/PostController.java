@@ -1,5 +1,5 @@
 package com.hookhub.hookhub_backend.controller;
 
-public class Post {
+public class PostController {
 
 }
